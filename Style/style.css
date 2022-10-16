@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-blue);
+}
+
+main {
+  width: 1290px;
+  height: 620px;
+  display: grid;
+  grid-template-columns: 0.9fr 1fr 0.9fr 0.9fr;
+  grid-template-rows: auto 280px;
+  grid-template-areas:
+    "pr1 pr1 pr2 pr5"
+    "pr3 pr4 pr4 pr5";
+  gap: 30px;
+}
+
+.person__description {
+  color: var(--light-gray);
+  opacity: 70%;
+}
+
+p {
+  color: var(--light-gray);
+  opacity: 50%;
+}
+
+h4 {
+  color: var(--light-grayish-blue);
+}
+
+h1 {
+  font-size: 21px;
+  color: var(--light-grayish-blue);
+}
+
+.person__3 h4,
+.person__5 h4 {
+  color: var(--very-dark-grayish-blue);
+}
+
+.person__3 h1,
+.person__5 h1 {
+  color: var(--very-dark-grayish-blue);
+}
+
+.person__3 p,
+.person__5 p {
+  color: var(--very-dark-grayish-blue);
+}
+
+.person__3 .person__description,
+.person__5 .person__description {
+  color: var(--very-dark-grayish-blue);
+}
+
+.person__1 {
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 80%;
+  grid-area: pr1;
+  background-color: var(--moderate-violet);
+}
+
+.person__2 {
+  grid-area: pr2;
+  background-color: var(--very-dark-grayish-blue);
+}
+
+.person__3 {
+  grid-area: pr3;
+  background-color: var(--white);
+}
+
+.person__4 {
+  grid-area: pr4;
+  background-color: var(--very-dark-blackish-blue);
+}
+
+.person__5 {
+  grid-area: pr5;
+  background-color: var(--white);
+}
+
+.character {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.person__data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+}
+
+.person__picture {
+  border-radius: 50%;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: static;
+  margin: 10px 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    width: 340px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  main {
+    width: 300px;
+  }
+}
